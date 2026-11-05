@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ranjith Kumar S</title>
+  <meta name="description" content="Ranjith Kumar S, a senior full-stack engineer in Bangalore with about 7 years of experience in React, Node.js and AWS, now building AI agents.">
+  <meta property="og:title" content="Ranjith Kumar S, Senior Software Engineer">
+  <meta property="og:description" content="Senior full-stack engineer with about 7 years in React, Node.js and AWS, now building AI agents.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2318181b'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='30' fill='%23fafaf9'%3ERK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #18181b;
+      --muted: #6b6b70;
+      --faint: #a1a1a6;
+      --line: #e7e5e4;
+      --accent: #b4532a;
+      --dot: #16a34a;
+      --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #111113;
+        --text: #ececee;
+        --muted: #9d9da3;
+        --faint: #66666c;
+        --line: #26262a;
+        --accent: #e58a5f;
+        --dot: #4ade80;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #111113;
+      --text: #ececee;
+      --muted: #9d9da3;
+      --faint: #66666c;
+      --line: #26262a;
+      --accent: #e58a5f;
+      --dot: #4ade80;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    ::selection { background: var(--accent); color: var(--bg); }
+
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 96px 24px 64px;
+    }
+
+    /* Intro */
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .status::before {
+      content: "";
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--dot);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--dot) 18%, transparent);
+    }
+    h1 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(44px, 9vw, 60px);
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+    }
+    .role {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(22px, 4.5vw, 26px);
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    .lede {
+      margin-top: 28px;
+      font-size: 17px;
+      color: var(--text);
+      max-width: 34em;
+    }
+    .lede em { font-style: normal; color: var(--accent); white-space: nowrap; }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 22px;
+      margin-top: 28px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .links a {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1px;
+      transition: border-color .2s, color .2s;
+    }
+    .links a:hover { border-color: var(--accent); color: var(--accent); }
+    .links a span { color: var(--faint); font-weight: 400; margin-left: 2px; }
+
+    /* Sections */
+    section { margin-top: 80px; }
+    h2 {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 20px;
+    }
+
+    /* Highlights */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .stat b {
+      display: block;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 1;
+      letter-spacing: -0.01em;
+    }
+    .stat span {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    /* Experience */
+    .xp { list-style: none; }
+    .xp li {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 16px;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+    .xp li:last-child { border-bottom: 1px solid var(--line); }
+    .xp time {
+      font-size: 14px;
+      color: var(--faint);
+      font-variant-numeric: tabular-nums;
+      padding-top: 1px;
+    }
+    .xp .org { font-weight: 500; }
+    .xp .what { font-size: 14px; color: var(--muted); }
+
+    /* Project */
+    .project p { color: var(--text); }
+    .project h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .project p + p { margin-top: 10px; }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+      list-style: none;
+    }
+    .tags li {
+      font-size: 13px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 11px;
+    }
+
+    /* Toolkit */
+    .kit { display: grid; gap: 10px; }
+    .kit div {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 16px;
+      font-size: 15px;
+    }
+    .kit dt { color: var(--faint); font-size: 14px; padding-top: 1px; }
+    .kit dd { color: var(--text); }
+
+    /* Footer */
+    footer {
+      margin-top: 96px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+    .cta {
+      font-family: var(--serif);
+      font-size: clamp(28px, 6vw, 36px);
+      line-height: 1.2;
+    }
+    .cta a {
+      color: var(--accent);
+      font-style: italic;
+      border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+      transition: border-color .2s;
+      overflow-wrap: anywhere;
+    }
+    .cta a:hover { border-color: var(--accent); }
+    .fine a:hover { color: var(--text); }
+    .fine {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 40px;
+      font-size: 13px;
+      color: var(--faint);
+    }
+
+    @media (max-width: 560px) {
+      .wrap { padding: 64px 20px 48px; }
+      section { margin-top: 64px; }
+      .stats { grid-template-columns: 1fr; gap: 20px; }
+      .stat { display: grid; grid-template-columns: 96px 1fr; gap: 16px; align-items: baseline; }
+      .stat b { font-size: 34px; }
+      .stat span { margin-top: 0; }
+      .xp li, .kit div { grid-template-columns: 1fr; gap: 2px; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .wrap > * { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
+      .wrap > *:nth-child(2) { animation-delay: .06s; }
+      .wrap > *:nth-child(3) { animation-delay: .12s; }
+      .wrap > *:nth-child(n+4) { animation-delay: .18s; }
+      @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" id="top">
+
+    <header>
+      <p class="status">Bangalore, India · Open to new roles</p>
+      <h1>Ranjith Kumar S</h1>
+      <p class="role">Senior Software Engineer</p>
+      <p class="lede">
+        Full-stack engineer with about seven years building fast, accessible web apps
+        with React, TypeScript, Node.js and AWS, from a major US streaming service to
+        enterprise SaaS. Lately I’ve been building <em>AI agents</em> and RAG systems.
+      </p>
+      <nav class="links" aria-label="Contact links">
+        <a href="mailto:ranjithkumar.yes@gmail.com">Email</a>
+        <a href="https://github.com/ranjith-s" target="_blank" rel="noopener">GitHub<span>↗</span></a>
+        <a href="https://linkedin.com/in/ranjith-engineer" target="_blank" rel="noopener">LinkedIn<span>↗</span></a>
+        <a href="Ranjith_Kumar_Resume.pdf" target="_blank" rel="noopener">Résumé<span>↗</span></a>
+      </nav>
+    </header>
+
+    <section aria-labelledby="h-highlights">
+      <h2 id="h-highlights">Highlights</h2>
+      <div class="stats">
+        <div class="stat"><b>~7 yrs</b><span>Shipping consumer and enterprise web products</span></div>
+        <div class="stat"><b>40%</b><span>Faster startup for a major US streaming app</span></div>
+        <div class="stat"><b>Millions</b><span>Of records moved through a serverless AWS pipeline</span></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-xp">
+      <h2 id="h-xp">Experience</h2>
+      <ol class="xp">
+        <li>
+          <time>2026</time>
+          <div><div class="org">IIT Mandi</div><div class="what">Agentic AI residential program</div></div>
+        </li>
+        <li>
+          <time>2025–26</time>
+          <div><div class="org">M-Files</div><div class="what">Software Engineer II</div></div>
+        </li>
+        <li>
+          <time>2021–25</time>
+          <div><div class="org">Dish Network · Sling TV</div><div class="what">Senior Engineer</div></div>
+        </li>
+        <li>
+          <time>2019–21</time>
+          <div><div class="org">Diatoz Solutions</div><div class="what">Software Development Engineer</div></div>
+        </li>
+        <li>
+          <time>2014–18</time>
+          <div><div class="org">B.Tech, Information Technology</div><div class="what">Sri Shakthi Institute of Engineering and Technology</div></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="project" aria-labelledby="h-project">
+      <h2 id="h-project">Recent project</h2>
+      <h3>FarmersIntel</h3>
+      <p>
+        An AI agent that helps Indian farmers decide when and where to sell. Ask it about
+        today’s mandi prices, seasonal trends or government scheme eligibility, and it
+        answers using live market data.
+      </p>
+      <ul class="tags">
+        <li>ReAct agent</li>
+        <li>LLaMA 3.1</li>
+        <li>Ollama</li>
+        <li>Agmarknet API</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="h-kit">
+      <h2 id="h-kit">Toolkit</h2>
+      <dl class="kit">
+        <div><dt>Frontend</dt><dd>React, TypeScript, Redux, React Native, Vue.js</dd></div>
+        <div><dt>Backend</dt><dd>Node.js, GraphQL, WebSockets, MySQL, MongoDB</dd></div>
+        <div><dt>Cloud &amp; AI</dt><dd>AWS Lambda/SQS/S3, LangGraph, RAG, Ollama</dd></div>
+      </dl>
+    </section>
+
+    <footer>
+      <p class="cta">Let’s build something.<br><a href="mailto:ranjithkumar.yes@gmail.com">ranjithkumar.yes@gmail.com</a></p>
+      <div class="fine">
+        <span>© 2026 Ranjith Kumar S</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
